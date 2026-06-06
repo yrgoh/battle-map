@@ -1,0 +1,9 @@
+node_modules/
+dist/
+server/data/
+s-reit-dashboard/
+.env
+Shopee automation/
+backup-v1.0/
+dividend_analysis_results.txt
+hrnetgroup_deep_dive.txt

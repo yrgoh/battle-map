@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><title>Clear Cache</title></head>
+<body>
+<script>
+  const keys = Object.keys(localStorage);
+  keys.forEach(k => localStorage.removeItem(k));
+  document.body.innerHTML = `<p>Cleared ${keys.length} entries:</p><ul>${keys.map(k => `<li>${k}</li>`).join('')}</ul><p><a href="/">Go to Dashboard</a></p>`;
+</script>
+</body>
+</html>

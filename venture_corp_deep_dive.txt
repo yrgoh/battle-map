@@ -1,0 +1,233 @@
+================================================================================
+DIVIDEND MACHINES 8-STEP FRAMEWORK — DEEP DIVE
+VENTURE CORPORATION LTD (SGX: V03.SI)
+Analysis Date: 28 May 2026 | Price: SGD 17.83
+================================================================================
+
+BUSINESS OVERVIEW
+────────────────────────────────────────────────────────────────────────────────
+- Founded 1984, listed on SGX Mainboard since 1997
+- Electronics Manufacturing Services (EMS) for global MNCs
+- 30+ companies globally: SE Asia, NE Asia, Americas, Europe
+- Full value chain: design → prototyping → engineering → manufacturing → after-sales
+- Key technology domains: Test & Measurement, Networking & Communications,
+  Life Science, Semiconductor, Medical, Lifestyle Consumer
+- One of Singapore's largest tech manufacturers (market cap ~SGD 5.1B)
+
+================================================================================
+RECENT FINANCIAL PERFORMANCE
+================================================================================
+  Metric                    FY2025          FY2024         YoY
+  ───────────────────────────────────────────────────────────────────
+  Revenue                   S$2,534.5M      S$2,735.9M     -7.4%
+  Net Profit                S$227.0M        S$245.0M       -7.4%
+  EPS (diluted)             78.7 cents      84.0 cents     -6.8%
+  Net Margin                9.0%            9.0%           stable
+  Net Cash Position         S$1.28B         —              —
+  Full-Year DPS             80 cents        75 cents       +6.7%
+  DPS payout ratio          101.7%          89.3%          —
+  Operating Cash Flow       S$251.5M        —              —
+  Free Cash Flow            S$223.5M        —              —
+
+  Shares outstanding (calc): ~288.4M (S$227.0M / S$0.787 EPS)
+  Market capitalisation:    ~SGD 5.14B
+  P/E ratio:                22.7x
+  Cash per share:           S$4.44 (25% of share price)
+  Enterprise Value:         S$3.86B (market cap - net cash)
+
+================================================================================
+8-STEP FRAMEWORK — DETAILED ANALYSIS
+================================================================================
+
+STEP 1: DOES THE COMPANY PAY DIVIDENDS?
+────────────────────────────────────────────────────────────────────────────────
+  ✓ PASS — Consistent dividend payer since listing in 1997.
+  Semi-annual payout cadence: May (final) + September (interim).
+  Only missed/cut during GFC (2008-09). COVID (2020) saw uninterrupted 75¢ DPS.
+  VERDICT: ✓✓✓ (exemplary track record)
+
+STEP 2: STABLE OR RISING DPS PAST 5-10 YEARS?
+────────────────────────────────────────────────────────────────────────────────
+  FY2017: 60.0¢ | FY2018: 70.0¢ | FY2019: 70.0¢ | FY2020: 75.0¢
+  FY2021: 75.0¢ | FY2022: 75.0¢ | FY2023: 75.0¢ | FY2024: 75.0¢
+  FY2025: 80.0¢ (includes 5¢ special dividend)
+
+  DPS CAGR (2017-2025): 3.7% per annum
+  Number of years DPS was cut: ZERO
+  Regular DPS floor: 75.0¢ maintained for 5 consecutive years (FY2020-2024)
+  Latest trend: ↑ Raised to 80.0¢ in FY2025 (regular 75¢ + 5¢ special)
+
+  VERDICT: ✓ PASS — Steady, predictable DPS. Growth is modest but reliable.
+  The FY2025 increase breaks 5 years of flat dividends — positive signal.
+
+STEP 3: DIVIDEND PAYOUT RATIO SUSTAINABLE (<100%)?
+────────────────────────────────────────────────────────────────────────────────
+  FY2017: 38% | FY2018: 62% | FY2019: 56% | FY2020: 73%
+  FY2021: 70% | FY2022: 59% | FY2023: (est. 82%) | FY2024: 89%
+  FY2025: 101.7% (80.0¢ / 78.7¢ EPS)
+
+  ⚠ FY2025 payout exceeds 100% — THE KEY RED FLAG.
+
+  However, context matters:
+  - Regular DPS ex-special: 75.0¢ / 78.7¢ = 95.3% (within range)
+  - The 5¢ "special" dividend pushed it over 100%
+  - Net cash position: S$1.28B (zero debt) — this easily absorbs overshoot
+  - EPS decline of 6.8% was revenue-driven (FX headwinds), not structural
+  - Historically, payout was ~55-70%; last 3 years have trended higher
+
+  Forward estimate (FY2026):
+  - Consensus EPS growth ~6.6% → est. EPS = 83.9¢
+  - If DPS maintained at 80¢ → payout = 95.4% (still tight)
+  - If DPS returns to 75¢ → payout = 89.4% (comfortable)
+  - If EPS recovers to FY2024 level (84¢) → 80¢ DPS = 95.2%
+
+  VERDICT: ⚠ CAUTION — 101.7% is unsustainable long-term.
+  But the net cash fortress and special-dividend nature make this acceptable
+  for 1-2 years. Watch closely. If payout stays >100% in FY2026, downgrade.
+
+STEP 4: DEBT SERVICING RATIO ≤30%?
+────────────────────────────────────────────────────────────────────────────────
+  Gross Debt: S$0 (ZERO)
+  Net Cash: S$1.28 billion
+  Finance Costs / Operating Profit: 0% (no interest payments)
+
+  VERDICT: ✓✓✓ PASS (spectacular) — One of the most pristine balance sheets
+  on the SGX. No borrowings whatsoever. S$1.28B net cash means interest income
+  actually ADDS to profits, not subtracts.
+
+STEP 5: PAID OUT CAPITAL RAISED IN PAST 5 YEARS?
+────────────────────────────────────────────────────────────────────────────────
+  Last 5 years dividends: 75+75+75+75+80 = 380 cents/share = S$3.80/sh
+  Total dividends paid: ~288.4M × S$3.80 = ~S$1.1 billion
+  Capital raised: S$0 (net share buybacks, not issuances)
+
+  In fact, the company has been REDUCING share count through buybacks:
+  - FY2020: 291.3M shares → FY2025: 288.4M shares
+  - Net reduction of ~2.9M shares (~1%)
+
+  VERDICT: ✓✓✓ PASS — Not only has it never needed fresh capital,
+  it has returned >S$1.1B to shareholders over 5 years while reducing
+  share count. This is textbook capital stewardship.
+
+STEP 6: MARKET CAP > S$500 MILLION?
+────────────────────────────────────────────────────────────────────────────────
+  Market cap: ~SGD 5.14 billion
+  Threshold: S$500M
+
+  VERDICT: ✓✓✓ PASS — 10x the minimum threshold. Large-cap SGX stock.
+  Deep institutional liquidity. FTSE Straits Times Index component.
+
+STEP 7: RESILIENT BUSINESS MODEL?
+────────────────────────────────────────────────────────────────────────────────
+  MOAT ASSESSMENT:
+  ┌────────────────────────────────────────────────────────────────────────────┐
+  │ STRENGTHS                                                                 │
+  │ ✓ 30+ year MNC relationships with high switching costs                    │
+  │ ✓ Full value chain integration (differentiated from pure EMS players)     │
+  │ ✓ Diversified across 6+ technology domains (not reliant on one sector)    │
+  │ ✓ Net cash balance sheet — no solvency risk ever                         │
+  │ ✓ Margins stable at 9% through downturns (FY2025 vs FY2024: both 9.0%)   │
+  │ ✓ Recurring revenue: products with multi-year lifecycles                 │
+  │ ✓ Growth from hyperscale data-center, networking, semiconductor trends   │
+  │                                                                          │
+  │ RISKS                                                                    │
+  │ ⚠ Cyclical — exposed to tech capex cycles and semiconductor demand       │
+  │ ⚠ Revenue declining 2 years in a row (-7.4% FY2025)                      │
+  │ ⚠ Customer concentration risk (top MNC clients)                           │
+  │ ⚠ China/Taiwan geopolitical risk (some manufacturing clusters)           │
+  │ ⚠ Currency risk (SGD reporting but global operations)                     │
+  │                                                                          │
+  │ MOAT SCORE: 7/10                                                         │
+  │ The moat is real (deep MNC integration, engineering IP) but narrower     │
+  │ than moat-grade consumer brands. The cash buffer is the real defensible   │
+  │ advantage here.                                                          │
+  └────────────────────────────────────────────────────────────────────────────┘
+
+  VERDICT: ✓ PASS — Not an unassailable moat, but resilient enough.
+  Net cash position is the ultimate business model insurance.
+
+STEP 8: YIELD MEETS TARGET OR AT 5-YEAR HISTORICAL HIGH?
+────────────────────────────────────────────────────────────────────────────────
+  Current yield: 4.49% (TTM)
+
+  5-YEAR YIELD ANALYSIS (based on price ranges each year):
+  ┌─────────────────────────────────────────────────────────────────┐
+  │ Year   DPS    Price Range      Yield Range       Average Price  │
+  │ 2022   75¢    12.87 – 14.99    5.0% – 5.8%       ≈13.50         │
+  │ 2023   75¢    9.83 – 15.34     4.9% – 7.6%       ≈12.50         │
+  │ 2024   75¢    11.27 – 13.87    5.4% – 6.7%       ≈12.50         │
+  │ 2025   80¢    9.44 – 14.79     5.4% – 8.5%       ≈12.00         │
+  │ 2026   80¢    14.70 – 18.65    4.3% – 5.4%       ≈16.50         │
+  │                                                                    │
+  │ CURRENT: 80¢ @ S$17.83 = 4.49%                                    │
+  └─────────────────────────────────────────────────────────────────┘
+
+  ▸ 5-year historical yield range: ~4.3% – 8.5%
+  ▸ Current yield (4.49%) is at the LOW END of historical range
+  ▸ The stock has re-rated from ~S$12 to ~S$18 over 18 months
+  ▸ At recent lows (S$10.92), yield would be 7.3%
+  ▸ At 52-week high (S$18.75), yield drops to 4.3%
+
+  VERDICT: ⚠ WAIT (fail for Step 8 trigger)
+  The yield is NOT at a 5-year historical high — quite the opposite.
+  At current price, you're buying at peak valuation with below-average yield.
+  If the stock pulls back to S$15-16, yield improves to 5.0-5.3%.
+  If the stock drops to S$12 (2025 average), yield is a compelling 6.7%.
+
+  For context: the yield was 6-8% when this stock was below S$13.
+  The price has run up 80% from 2025 lows without a proportional increase
+  in earnings or dividends. This is multiple expansion, not earnings growth.
+
+================================================================================
+FINAL VERDICT & RECOMMENDATION
+================================================================================
+
+  STEP SUMMARY:
+  Step 1: ✓ PASS     Dividends paid consistently
+  Step 2: ✓ PASS     DPS stable + rising (60¢ → 80¢)
+  Step 3: ⚠ CAUTION  Payout 101.7% (special div pushed it over)
+  Step 4: ✓ PASS     Zero debt, S$1.28B net cash
+  Step 5: ✓ PASS     >S$1.1B returned to shareholders, no capital raised
+  Step 6: ✓ PASS     S$5.1B market cap (10x threshold)
+  Step 7: ✓ PASS     Resilient EMS with MNC integration moat
+  Step 8: ✗ WAIT     Yield 4.49% at low end of 5-year range (4.3-8.5%)
+
+  OVERALL: WAIT FOR BETTER ENTRY (6/8 steps pass, 1 caution, 1 fail)
+
+  TARGET BUY PRICE: S$15.00 – S$16.00 (yield: 5.0 – 5.3%)
+  IDEAL BUY PRICE:  S$12.00 – S$13.00 (yield: 6.2 – 6.7%)
+
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │ A TIER 1 BUSINESS AT A TIER 3 ENTRY PRICE.                              │
+  │                                                                         │
+  │ Venture Corp is indisputably one of Singapore's best dividend stocks:   │
+  │ pristine balance sheet, 25+ year track record, zero leverage,           │
+  │ consistent DPS growth. But the stock's 80% rally from 2025 lows         │
+  │ has compressed the yield from 7%+ to just 4.5%. You are now paying      │
+  │ 22.7x earnings for a company with declining revenue and a payout        │
+  │ ratio that just breached 100%.                                          │
+  │                                                                         │
+  │ The QUALITY is not in question. The PRICE is.                            │
+  │                                                                         │
+  │ Recommendation: Set a GTC limit order at S$15.00. At that price:        │
+  │ - P/E drops to 19x     - Yield improves to 5.3%                         │
+  │ - Closer to mid-range of historical yields                              │
+  └─────────────────────────────────────────────────────────────────────────┘
+
+KEY MONITORING POINTS FOR RE-ENTRY:
+  1. FY2026 half-year results (est. August 2026): watch revenue trend
+  2. Next dividend declaration: if DPS maintained at 80¢, positive signal
+  3. EPS recovery: if FY2026 EPS returns to 84¢+, payout ratio normalizes
+  4. MAS EQDP: DBS notes potential re-rating from SGX market reforms
+  5. Tech cycle: hyperscale capex cycle boosts semiconductor demand
+
+DATA SOURCES:
+  - Venture Corp FY2025 results (26 Feb 2026) via web search results
+  - dividends.sg — TTM yield, dividend payment history
+  - Yahoo Finance chart API — 5-year adjusted close prices, 52-week ranges
+  - Straits Times Index / SGX constituent data
+  - DBS Research — target price S$17.90, HOLD rating (Feb 2026)
+
+DISCLAIMER: This is analytical research, not financial advice.
+Past performance does not guarantee future results.
+================================================================================
