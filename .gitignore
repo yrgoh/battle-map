@@ -12,3 +12,5 @@ sovereigns-council/
 qiuzhi-restaurant-creative/
 scripts/
 temp-*.geojson
+.claude/settings.local.json
+.claude/.claude/
