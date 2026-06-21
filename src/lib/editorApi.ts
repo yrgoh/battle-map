@@ -1,6 +1,6 @@
 import type { BattleConfig, Unit, PositionKeyframe, CampaignEvent } from '../types/battle';
 
-const BASE = 'http://localhost:3001';
+const BASE = '';
 
 async function api<T>(path: string, opts?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {
