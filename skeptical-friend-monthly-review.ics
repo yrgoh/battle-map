@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Skeptical Friend//Review Reminder//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:20260815-skeptical-friend-monthly-review@claude
+DTSTAMP:20260815T000000Z
+DTSTART:20260907T090000
+DTEND:20260907T092000
+RRULE:FREQ=MONTHLY;BYDAY=1MO
+SUMMARY:Review open theses (Skeptical Friend)
+DESCRIPTION:Open Claude Code and run:  /skeptical-friend review
+\nIt will read the ledger and tell you which theses are due or overdue.\n\nScore each open thesis honestly: played_out | partial | invalidated | not_yet.\nThe lessons line is the point - it compounds into a better investor.\n\n(1% learning bets are still bets. Follow up.)
+END:VEVENT
+END:VCALENDAR

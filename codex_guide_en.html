@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codex Complete Guide [Video Documentation]</title>
+<style>
+  :root {
+    --sidebar-w: 280px;
+    --bg: #ffffff;
+    --text: #1a1a2e;
+    --heading: #0f0f1a;
+    --border: #e2e8f0;
+    --code-bg: #f7f8fa;
+    --callout-bg: #f0f7ff;
+    --callout-border: #3b82f6;
+    --table-border: #e2e8f0;
+    --table-header: #f8fafc;
+    --link: #2563eb;
+    --sidebar-bg: #f8fafc;
+    --sidebar-hover: #e2e8f0;
+    --sidebar-active: #dbeafe;
+    --toc-item: #64748b;
+    --toc-item-hover: #1a1a2e;
+    --toc-item-active: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--bg);
+    display: flex;
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    width: var(--sidebar-w);
+    height: 100vh;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 24px 16px 40px 16px;
+    z-index: 100;
+    scroll-behavior: smooth;
+  }
+  .sidebar h3 {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    margin: 0 0 12px 0;
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  .sidebar li { margin: 0; }
+  .sidebar a {
+    display: block;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.88em;
+    color: var(--toc-item);
+    text-decoration: none;
+    transition: all 0.15s;
+    border-left: 2px solid transparent;
+  }
+  .sidebar a:hover {
+    background: var(--sidebar-hover);
+    color: var(--toc-item-hover);
+  }
+  .sidebar a.l1 { font-weight: 600; font-size: 0.9em; color: #475569; margin-top: 4px; }
+  .sidebar a.l2 { padding-left: 24px; }
+  .sidebar a.l3 { padding-left: 36px; font-size: 0.82em; }
+
+  /* ── Main Content ── */
+  .main {
+    margin-left: var(--sidebar-w);
+    max-width: 860px;
+    padding: 40px 48px 80px 48px;
+    width: 100%;
+  }
+  h1 { font-size: 2em; border-bottom: 2px solid var(--border); padding-bottom: 12px; margin-top: 0; }
+  h2 { font-size: 1.5em; margin-top: 48px; border-bottom: 1px solid var(--border); padding-bottom: 8px; scroll-margin-top: 24px; }
+  h3 { font-size: 1.2em; margin-top: 32px; scroll-margin-top: 24px; }
+  h4 { font-size: 1.05em; margin-top: 24px; scroll-margin-top: 24px; }
+  p { margin: 12px 0; }
+  img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border); margin: 16px 0; display: block; }
+  code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  pre { background: var(--code-bg); padding: 16px 20px; border-radius: 8px; overflow-x: auto; border: 1px solid var(--border); margin: 16px 0; }
+  pre code { background: none; padding: 0; }
+  ul, ol { padding-left: 24px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.93em; }
+  th, td { border: 1px solid var(--table-border); padding: 10px 14px; text-align: left; vertical-align: top; }
+  th { background: var(--table-header); font-weight: 600; }
+  blockquote { border-left: 4px solid var(--callout-border); background: var(--callout-bg); margin: 16px 0; padding: 12px 20px; border-radius: 0 8px 8px 0; }
+  blockquote p { margin: 4px 0; }
+  a { color: var(--link); }
+  .step { font-weight: 600; color: #2563eb; }
+  .image-placeholder { background: #f1f5f9; border: 2px dashed #cbd5e1; border-radius: 8px; padding: 32px; text-align: center; color: #94a3b8; margin: 16px 0; font-style: italic; font-size: 0.9em; }
+  .note { background: #fefce8; border-left: 4px solid #eab308; padding: 12px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+  .meta { color: #94a3b8; font-size: 0.9em; }
+
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; padding: 24px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ SIDEBAR ═══════════════════ -->
+<nav class="sidebar">
+  <h3>Contents</h3>
+  <ul>
+    <li><a href="#s1" class="l1">1. Preparation</a></li>
+    <li><a href="#s1-1" class="l2">1.1 Installation &amp; Download</a></li>
+    <li><a href="#s1-2" class="l2">1.2 Interface Overview</a></li>
+    <li><a href="#s2" class="l1">2. Basic Operations</a></li>
+    <li><a href="#s2-1" class="l2">2.1 Context Management</a></li>
+    <li><a href="#s2-2" class="l2">2.2 Quota Status</a></li>
+    <li><a href="#s2-3" class="l2">2.3 Model Selection</a></li>
+    <li><a href="#s3" class="l1">3. Local File R/W</a></li>
+    <li><a href="#s4" class="l1">4. Command Line Usage</a></li>
+    <li><a href="#s5" class="l1">5. Persistent Memory</a></li>
+    <li><a href="#s5-1" class="l2">Method 1: Global Memory</a></li>
+    <li><a href="#s5-2" class="l2">Method 2: Project Memory</a></li>
+    <li><a href="#s5-3" class="l2">Method 3: Auto Memory</a></li>
+    <li><a href="#s6" class="l1">6. Project Planning</a></li>
+    <li><a href="#s7" class="l1">7. Plugins</a></li>
+    <li><a href="#s7-1" class="l2">7.1 Location &amp; Status</a></li>
+    <li><a href="#s7-2" class="l2">7.2 Plugin Directory</a></li>
+    <li><a href="#s7-3" class="l2">7.3 Key Plugins</a></li>
+    <li><a href="#s8" class="l1">8. Skills &amp; CLI</a></li>
+    <li><a href="#s8-1" class="l2">8.1 Recommended Skills</a></li>
+    <li><a href="#s8-2" class="l2">8.2 LobeHub</a></li>
+    <li><a href="#s8-3" class="l2">8.3 Creating Skills</a></li>
+    <li><a href="#s8-4" class="l2">8.4 CLI Tools</a></li>
+    <li><a href="#s9" class="l1">9. MCP</a></li>
+    <li><a href="#s9-1" class="l2">9.1 MCP Location</a></li>
+    <li><a href="#s9-2" class="l2">9.2 Installation</a></li>
+    <li><a href="#s9-3" class="l2">9.3 Extensions</a></li>
+    <li><a href="#s10" class="l1">10. Automation Tasks</a></li>
+    <li><a href="#s10-1" class="l2">Method 1: Panel</a></li>
+    <li><a href="#s10-2" class="l2">Method 2: Chat Setup</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════ MAIN CONTENT ═══════════════════ -->
+<main class="main">
+
+<h1>Codex Complete Guide [Video Documentation]</h1>
+<p class="meta">Last updated: May 16 &nbsp;|&nbsp; Translated from Chinese original &nbsp;|&nbsp; Source: Qiuzhi 2046 Knowledge Base</p>
+
+<div class="note">
+  <strong>Note on images:</strong> The majority of screenshots in this document are hosted on Feishu's CDN and require login authentication to view. The images that were successfully captured are embedded inline; the remainder are shown as descriptive placeholders. To view all images, visit the <a href="https://my.feishu.cn/wiki/OCY5wzbGhiLDr8kMulkcLLuSnQd" target="_blank">original Feishu document</a>.
+</div>
+
+<hr>
+
+<!-- ═══════════ SECTION 1 ═══════════ -->
+<h2 id="s1">1. Preparation</h2>
+
+<h3 id="s1-1">1.1 Installation &amp; Download (VPN required)</h3>
+<p><span class="step">Step 1:</span> Go to the <a href="https://openai.com/zh-Hans-CN/codex/" target="_blank">official website</a> to download.</p>
+<p><span class="step">Step 2:</span> Log in to Codex (you can use a ChatGPT account or an API key).</p>
+<ul>
+  <li>Log in with a <strong>ChatGPT</strong> account (just having an account is enough).</li>
+</ul>
+<img src="images/img_Xtptb4TiVo7KoqxfArOc9ZvonRb.jpg" alt="ChatGPT account login screenshot" loading="lazy">
+<ul>
+  <li>Or log in with an <strong>API key</strong> (requires separate purchase).</li>
+</ul>
+<img src="images/img_BvDFbqTZKo5w4pxYsBQcQaLpnYg.jpg" alt="API key login screenshot" loading="lazy">
+<img src="images/img_QsnIbF4XfowCu9xdSUdcRTfon2g.jpg" alt="OpenAI API key purchase page" loading="lazy">
+<p>If needed / if you have the means, you can also consider purchasing an OpenAI API key <a href="https://chatgpt.com" target="_blank">(click here to go to the ChatGPT website to purchase)</a> for login.</p>
+
+<h3 id="s1-2">1.2 Interface Overview</h3>
+<div class="image-placeholder">[Screenshot: Codex main interface overview]</div>
+
+<hr>
+
+<!-- ═══════════ SECTION 2 ═══════════ -->
+<h2 id="s2">2. Basic Operations</h2>
+
+<h3 id="s2-1">2.1 Context Management</h3>
+<p><span class="step">Step 1:</span> Check the context status.</p>
+<div class="image-placeholder">[Screenshot: Context status display in Codex]</div>
+<p><span class="step">Step 2:</span> Compress the context.</p>
+<ul>
+  <li>You can manually compress by entering the Chinese command <code>/compress</code>.</li>
+</ul>
+<div class="image-placeholder">[Screenshot: Context compression via slash command]</div>
+
+<h3 id="s2-2">2.2 Quota Status</h3>
+<h4>Method 1: Check via System Settings</h4>
+<div class="image-placeholder">[Screenshot: Quota view in system settings]</div>
+<h4>Method 2: Check via Slash Command</h4>
+<div class="image-placeholder">[Screenshot: Quota status via slash command 1]</div>
+<div class="image-placeholder">[Screenshot: Quota status via slash command 2]</div>
+
+<h3 id="s2-3">2.3 Model Selection</h3>
+<div class="image-placeholder">[Screenshot: Model selection interface]</div>
+<ul>
+  <li><strong>Speed</strong> has two modes:
+    <ul>
+      <li><strong>Standard</strong> &mdash; Default speed, regular quota usage.</li>
+      <li><strong>Fast</strong> &mdash; Overall efficiency improved by 1.5&times;, but quota consumption also increases.</li>
+    </ul>
+  </li>
+  <li><strong>Model</strong> &mdash; You can directly select the latest 5.5 model, or choose other sub-models based on your needs.</li>
+  <li><strong>Intelligence level</strong> depends on the task difficulty &mdash; for general tasks, "Medium" is sufficient.</li>
+</ul>
+
+<hr>
+
+<!-- ═══════════ SECTION 3 ═══════════ -->
+<h2 id="s3">3. Local File Reading &amp; Writing</h2>
+<p><span class="step">Step 1:</span> Create a new project.</p>
+<ul>
+  <li>Both options shown below can create a new project or select a local folder.</li>
+</ul>
+<div class="image-placeholder">[Screenshot: New project / local folder selection]</div>
+
+<p><span class="step">Step 2:</span> Permission settings.</p>
+<ul>
+  <li><strong>Default permissions:</strong> Can only read/write all files within the selected folder. If access to content outside the folder is needed, Codex must request permission separately.</li>
+  <li><strong>Auto-review:</strong> Higher permissions than default. AI automatically checks if an operation poses a risk &mdash; flags for approval if risky, executes directly if safe.</li>
+  <li><strong>Full access:</strong> Codex can perform any operation on your computer without asking for confirmation.</li>
+</ul>
+<div class="image-placeholder">[Screenshot: Permission settings interface]</div>
+
+<p><span class="step">Step 3:</span> Multi-task in a project.</p>
+<ul>
+  <li>Supports opening additional parallel conversation tasks within an existing project.</li>
+</ul>
+<div class="image-placeholder">[Screenshot: Multi-task parallel conversations]</div>
+
+<hr>
+
+<!-- ═══════════ SECTION 4 ═══════════ -->
+<h2 id="s4">4. Command Line Usage</h2>
+<p>After enabling <strong>Auto-review</strong> mode, Codex can work directly via the command line. We can have Codex install various tools for us just by using everyday conversational language.</p>
+<div class="image-placeholder">[Screenshot: Command line usage in Codex]</div>
+
+<blockquote>
+  <p><strong>A drawback of Codex:</strong> Currently, files displayed in the "Chat task panel" can be opened in the right-side "Results panel" but cannot be edited.</p>
+</blockquote>
+<div class="image-placeholder">[Screenshot: Codex file display limitation]</div>
+<blockquote>
+  <p><strong>Solution:</strong> Download an "Agent IDE" (an editor with AI). Codex will automatically detect it and add it to the top-right corner. Take Cursor as an example.</p>
+</blockquote>
+<ul>
+  <li><span class="step">Step 1:</span> Use everyday conversational language to have Codex deploy Cursor.</li>
+</ul>
+<pre><code>Please check if Cursor is already installed on my machine; if not, install it for me.
+If already installed, set the default target for the "Open Editor" button in
+the top-right corner of the Codex desktop app to Cursor, and verify that it works.</code></pre>
+
+<ul>
+  <li><span class="step">Step 2:</span> Once deployed, Cursor will be pinned to the top-right corner; after that, files can be opened and edited directly in Cursor.</li>
+</ul>
+<div class="image-placeholder">[Screenshot: Cursor integration in Codex - step 1]</div>
+<div class="image-placeholder">[Screenshot: Cursor integration in Codex - step 2]</div>
+
+<hr>
+
+<!-- ═══════════ SECTION 5 ═══════════ -->
+<h2 id="s5">5. Persistent Memory</h2>
+
+<h3 id="s5-1">Method 1: Global-Level Long-Term Memory</h3>
+<ul>
+  <li>The <strong>Global Agents.md</strong> &mdash; no matter which project you're in when talking to Codex, it will immediately pass the recorded memories as context to the large model.</li>
+  <li>The <strong>Global Agents.md</strong> is suitable for recording rules that apply to all tasks, such as your usage habits, work preferences, etc.</li>
+</ul>
+<p><span class="step">Step 1:</span> Find "Personalization" in "Settings".</p>
+<div class="image-placeholder">[Screenshot: Settings &gt; Personalization - step 1]</div>
+<div class="image-placeholder">[Screenshot: Settings &gt; Personalization - step 2]</div>
+<p><span class="step">Step 2:</span> Directly add the desired rules and constraints in "Custom Instructions", such as personal usage habits, work preferences, etc.</p>
+<div class="image-placeholder">[Screenshot: Custom instructions input field]</div>
+<p><span class="step">Step 3:</span> You can also directly use everyday language during chat tasks to explain your rules, and finally ask Codex to add them to the "Global agents.md".</p>
+<div class="image-placeholder">[Screenshot: Adding rules via chat to global agents.md]</div>
+
+<h3 id="s5-2">Method 2: Project-Level Persistent Memory</h3>
+<ul>
+  <li>The <strong>Project-Level agents.md</strong> only takes effect persistently within a specific project.</li>
+</ul>
+<p><span class="step">Step 1:</span> Open the editor within the specific project (e.g., Cursor).</p>
+<div class="image-placeholder">[Screenshot: Opening Cursor in project]</div>
+<p><span class="step">Step 2:</span> Create a new file in the editor and name it: <code>AGENTS.md</code>. (Note: AGENTS must be in uppercase.)</p>
+<div class="image-placeholder">[Screenshot: Creating AGENTS.md file in editor]</div>
+<p><span class="step">Step 3:</span> Directly add the rules you want in AGENTS.md using natural language.</p>
+<p><span class="step">Step 4:</span> You can also directly use everyday language during chat tasks to explain your rules, and finally ask Codex to add them to the "Project AGENTS.md".</p>
+
+<h3 id="s5-3">Method 3: Auto Memory</h3>
+<ul>
+  <li>The auto memory mechanism works like this: after you finish a conversation or task and remain idle for a while, Codex will summarize your previous conversations into memories and reuse them in subsequent conversations and projects.</li>
+</ul>
+<p><span class="step">Step 1:</span> Find "Enable Memory" under "Personalization" in "Settings".</p>
+<div class="image-placeholder">[Screenshot: Enable Memory toggle in settings]</div>
+<p><span class="step">Step 2:</span> Auto memory files are generally located in the <code>/Users/xxxx/.codex/memories</code> folder.</p>
+
+<hr>
+
+<!-- ═══════════ SECTION 6 ═══════════ -->
+<h2 id="s6">6. Large-Scale Project Planning &amp; Execution</h2>
+<p>For projects with a certain level of complexity, or projects you haven't fully figured out yet, you can enable <strong>Plan Mode</strong> to refine project ideas and approaches under Codex's guidance, and then execute.</p>
+
+<p><span class="step">Step 1:</span> Create a new project.</p>
+<p><span class="step">Step 2:</span> Turn on "Plan Mode".</p>
+<div class="image-placeholder">[Screenshot: Activating Plan Mode]</div>
+
+<p><span class="step">Step 3:</span> (Using "Build a personal website from scratch" as an example) Follow Codex's guidance &mdash; refine the plan through guided selections or by entering your own prompts.</p>
+<div class="image-placeholder">[Screenshot: Plan Mode guided workflow]</div>
+
+<p><span class="step">Step 4:</span> After the plan is generated, you can also provide your own suggestions to adjust the plan.</p>
+<div class="image-placeholder">[Screenshot: Plan adjustment interface]</div>
+
+<p><span class="step">Step 5:</span> After plan execution begins, if you're not satisfied, you can temporarily submit suggestions and click "Guide" to submit them at an appropriate moment. The execution process will not be interrupted.</p>
+<div class="image-placeholder">[Screenshot: Mid-execution guidance - view 1]</div>
+<div class="image-placeholder">[Screenshot: Mid-execution guidance - view 2]</div>
+
+<p><span class="step">Step 6:</span> If you're unsure about some ideas during execution, you can use <strong>Fork</strong> to test a copy &mdash; this way you won't mess up the main task.</p>
+<div class="image-placeholder">[Screenshot: Fork feature demonstration]</div>
+
+<p><span class="step">Step 7:</span> While waiting, you can choose or customize a desktop pet under "Appearance" in "Settings". When awakened, the pet will tell you what Codex is currently doing.</p>
+<div class="image-placeholder">[Screenshot: Desktop pet customization]</div>
+
+<p><span class="step">Step 8:</span> In the top-right corner of the results preview interface, you can select "Annotations" to annotate the generated content. After annotating, send it to Codex for modifications.</p>
+<div class="image-placeholder">[Screenshot: Annotation feature - view 1]</div>
+<div class="image-placeholder">[Screenshot: Annotation feature - view 2]</div>
+<div class="image-placeholder">[Screenshot: Annotation feature - view 3]</div>
+
+<p><span class="step">Step 9:</span> After the project is complete, you can ask Codex to generate a <strong>Project-Level AGENTS.md</strong> based on the project you just completed.</p>
+<div class="image-placeholder">[Screenshot: Generating project AGENTS.md - step 1]</div>
+<div class="image-placeholder">[Screenshot: Generating project AGENTS.md - step 2]</div>
+
+<hr>
+
+<!-- ═══════════ SECTION 7 ═══════════ -->
+<h2 id="s7">7. Plugins</h2>
+
+<h3 id="s7-1">7.1 Plugin Location &amp; Status</h3>
+<div class="image-placeholder">[Screenshot: Plugin panel location in Codex interface]</div>
+
+<h3 id="s7-2">7.2 Plugin Directory (Chinese)</h3>
+
+<div class="note">
+  <strong>Note:</strong> All plugins included in Codex, along with their relevant Chinese information, have been fully organized into a separate document. <a href="#">View the document for plugins you may need to install &rarr;</a>
+</div>
+
+<h4>Essential Plugins</h4>
+<table>
+  <thead>
+    <tr><th>Plugin</th><th>Category</th><th>What It Does</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Chrome</strong></td><td>Featured</td><td>Handle web tasks using your browser login session &mdash; suitable for researching, testing pages, and organizing web information.</td></tr>
+    <tr><td><strong>GitHub</strong></td><td>Featured</td><td>View repos, PRs, Issues, and CI status &mdash; suitable for code collaboration, review, and release workflows.</td></tr>
+    <tr><td><strong>OpenAI Developers</strong></td><td>Featured</td><td>Query official development resources for OpenAI API, Agents, ChatGPT Apps, Codex, and more.</td></tr>
+    <tr><td><strong>Vercel</strong></td><td>Featured</td><td>Build and deploy web apps, agents, and preview environments.</td></tr>
+    <tr><td><strong>Netlify</strong></td><td>Coding / Engineering</td><td>Deploy frontend projects, manage preview environments, configure sites and functions.</td></tr>
+    <tr><td><strong>Sentry</strong></td><td>Coding / Engineering</td><td>View online errors and events &mdash; helps locate bugs, reproduce issues, and assess impact scope.</td></tr>
+    <tr><td><strong>Remotion</strong></td><td>Design</td><td>Create dynamic images / programmatic videos from prompts.</td></tr>
+    <tr><td><strong>HyperFrames by HeyGen</strong></td><td>Design</td><td>Write HTML and render videos &mdash; suitable for generating dynamic visual content.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="s7-3">7.3 Key Plugin Introductions</h3>
+
+<table>
+  <thead>
+    <tr><th>Plugin</th><th>Function</th><th>Use Cases</th><th>Example Scenarios</th><th>Notes</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Browser</strong></td>
+      <td>Lets Codex operate its built-in browser</td>
+      <td>Typically used for frontend automated testing</td>
+      <td>1. Auto-login to websites<br>2. Click buttons<br>3. Fill out forms<br>4. Page scrolling &amp; screenshots<br>5. Verify page functionality and styling</td>
+      <td>For public web pages, local previews, and pages that don't require login &mdash; prefer using Codex's built-in Browser.</td>
+    </tr>
+    <tr>
+      <td><strong>Computer Use</strong></td>
+      <td>Gives Codex an extra pair of "eyes" and a "mouse" &mdash; can control all computer software</td>
+      <td>1. Scenarios where CLI or plugins aren't enough<br>2. Scenarios that rely entirely on graphical interface interaction</td>
+      <td>1. Open music software and search for songs<br>2. Use the WeChat interface to send messages<br>3. Test desktop apps<br>4. Reproduce UI bugs<br>5. Check import/export workflows</td>
+      <td><strong>Currently macOS only</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Chrome</strong></td>
+      <td>Codex controls the real Google Chrome browser and performs browser operations in the background</td>
+      <td>Suitable for browser tasks that "must be done logged into a real website"</td>
+      <td>1. Open Gmail to check emails<br>2. Log into a company backend to update info<br>3. Compile information across multiple web pages</td>
+      <td>Will not directly take over the window you're currently using, so it won't interfere with your normal use of Google Chrome.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<!-- ═══════════ SECTION 8 ═══════════ -->
+<h2 id="s8">8. Skills &amp; CLI</h2>
+<p>You can directly throw Skill and CLI download links to Codex for automatic download, and complete deployment under Codex's guidance.</p>
+
+<h3 id="s8-1">8.1 Recommended Skills to Download</h3>
+
+<table>
+  <thead>
+    <tr><th>Skill Name</th><th>Function</th><th>Download</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Find-Skill</strong></td><td>A meta-skill that finds and installs skills from the open Agent Skill ecosystem based on user needs.</td><td><a href="https://github.com" target="_blank">GitHub</a></td></tr>
+    <tr><td><strong>Frontend-Design</strong></td><td>Creates frontend interfaces with unique style, production-grade quality, and refined design.</td><td><a href="https://github.com" target="_blank">GitHub</a></td></tr>
+    <tr><td><strong>humanizer-zh</strong></td><td>A Chinese-localized version of Humanizer &mdash; removes the AI-generated feel from text content.</td><td><a href="https://github.com" target="_blank">GitHub</a></td></tr>
+  </tbody>
+</table>
+
+<h3 id="s8-2">8.2 Skill Collection Website: LobeHub</h3>
+<p>You can browse for skills by category, or directly check out recommended high-quality skills in the curated collections.</p>
+<div class="image-placeholder">[Screenshot: LobeHub skill collection website]</div>
+
+<h3 id="s8-3">8.3 Creating Your Own Skill</h3>
+<p>Using the example of creating a skill that <em>"automatically writes a 'This Week's GitHub Trending Projects' article"</em>:</p>
+
+<p><span class="step">Step 1:</span> Ask Codex to compile this week's trending GitHub projects and explain what each project does.</p>
+<pre><code>What are the latest trending and popular GitHub projects this week?
+Clearly explain what each project does.</code></pre>
+
+<p><span class="step">Step 2:</span> Filter for 5 projects that match your writing goals and have the most stars, then write a "This Week's GitHub Trending Projects" article.</p>
+<pre><code>From the compiled list, select the 5 projects with the most stars across three
+domains — AI Programming, Research, and Learning — and write a "This Week's
+GitHub Trending Projects" article.</code></pre>
+
+<p><span class="step">Step 3:</span> Use the slash command to invoke the already-downloaded humanizer-zh skill to remove the AI-generated feel from the article.</p>
+<div class="image-placeholder">[Screenshot: Invoking humanizer-zh skill via slash command]</div>
+
+<p><span class="step">Step 4:</span> Polish the article's content and format.</p>
+<pre><code>Add a fixed intro and outro, use image2 to generate some accompanying images,
+and finally output as a Feishu document.</code></pre>
+
+<p><span class="step">Step 5:</span> Ask Codex to consolidate the entire process into a single skill.</p>
+<pre><code>Integrate and optimize the entire set of actions, steps, and standards from
+the above process into a single skill.</code></pre>
+<div class="image-placeholder">[Screenshot: Codex consolidating the skill]</div>
+
+<p><span class="step">Step 6:</span> You can now invoke and use this skill via a slash command.</p>
+<div class="image-placeholder">[Screenshot: Custom skill available via slash command]</div>
+
+<h3 id="s8-4">8.4 Recommended CLI Tools to Download</h3>
+
+<table>
+  <thead>
+    <tr><th>CLI Name</th><th>Function</th><th>Download</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Feishu CLI</strong></td>
+      <td>Feishu's official CLI tool, covering core business domains such as messaging, documents, multi-dimensional tables, spreadsheets, slides, calendar, email, tasks, and meetings. Provides 200+ commands and 24 AI Agent Skills.</td>
+      <td><a href="https://github.com/larksuite/cli/blob/main/README.zh.md" target="_blank">GitHub</a></td>
+    </tr>
+    <tr>
+      <td><strong>OpenCLI</strong></td>
+      <td>A universal command-line toolbox &mdash; a general-purpose CLI hub and AI-native runtime platform that can turn any website, desktop app, or local program into a unified CLI interface.</td>
+      <td><a href="https://github.com" target="_blank">GitHub</a></td>
+    </tr>
+    <tr>
+      <td><strong>GitHub CLI</strong></td>
+      <td>GitHub's official command-line tool. It brings pull requests, issues, and other GitHub concepts into the terminal, right alongside where you're already using git and code.</td>
+      <td><a href="https://github.com" target="_blank">GitHub</a></td>
+    </tr>
+    <tr>
+      <td><strong>Gemini CLI</strong></td>
+      <td>Gemini CLI brings Gemini's capabilities directly into the terminal. It provides lightweight access to Gemini, allowing you to access Gemini models from terminal commands in the most direct way possible.</td>
+      <td><a href="https://github.com" target="_blank">GitHub</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Also recommended &mdash; a GitHub page that curates CLI themes: <a href="#" target="_blank">Command-line interface</a>. You can browse and find the CLI tools you need.</p>
+
+<hr>
+
+<!-- ═══════════ SECTION 9 ═══════════ -->
+<h2 id="s9">9. MCP</h2>
+
+<h3 id="s9-1">9.1 MCP Location</h3>
+<div class="image-placeholder">[Screenshot: MCP section in Codex settings - view 1]</div>
+<div class="image-placeholder">[Screenshot: MCP section in Codex settings - view 2]</div>
+
+<h3 id="s9-2">9.2 MCP Installation</h3>
+<p>For beginner users, you can directly copy the MCP link and give it to Codex &mdash; let Codex handle the rest and ultimately guide you through authorization.</p>
+<ul>
+  <li>Using notebooklm MCP as an example, you can proceed as follows:</li>
+</ul>
+
+<p><span class="step">Step 1:</span> Input the instruction in natural language.</p>
+<pre><code>Please install the notebooklm MCP for me:
+https://github.com/PleasePrompto/notebooklm-mcp</code></pre>
+
+<p><span class="step">Step 2:</span> Follow the guidance to restart and authorize.</p>
+<div class="image-placeholder">[Screenshot: MCP restart &amp; authorization prompt]</div>
+<div class="image-placeholder">[Screenshot: MCP authorization confirmation]</div>
+
+<p><span class="step">Step 3:</span> Confirm successful download under "Settings" &rarr; "MCP Servers".</p>
+<div class="image-placeholder">[Screenshot: MCP servers list showing successful install]</div>
+
+<h3 id="s9-3">9.3 MCP Extensions</h3>
+<p>Regarding MCP, you can study and practice using the MCP sections within the following tutorials:</p>
+<blockquote>
+  <p><strong>Learning Resources</strong></p>
+  <p>&#x1F4FA; Video Tutorial: <em>Create Your Personal AI Assistant Team with the Amazing Claude Code! [Beginner's Guide]</em></p>
+  <p>&#x1F4C4; Documentation Tutorial: <em>Claude Code Tutorial</em></p>
+</blockquote>
+
+<hr>
+
+<!-- ═══════════ SECTION 10 ═══════════ -->
+<h2 id="s10">10. Automation Tasks</h2>
+
+<h3 id="s10-1">Method 1: Automation Panel</h3>
+<p><span class="step">Step 1:</span> Open the "Automation" panel.</p>
+<div class="image-placeholder">[Screenshot: Automation panel in Codex]</div>
+
+<p><span class="step">Step 2:</span> Create a new automation / or choose an official sample that closely matches your needs.</p>
+<div class="image-placeholder">[Screenshot: New automation or official samples]</div>
+
+<p><span class="step">Step 3:</span> Complete the automation task setup.</p>
+<div class="image-placeholder">[Screenshot: Automation task configuration]</div>
+
+<h3 id="s10-2">Method 2: Set Up via Natural Language Interaction</h3>
+<p>Set up automation tasks by interacting with Codex in everyday language in the chat dialog, for example:</p>
+<pre><code>Help me create an automation task that runs every Monday at 9 AM.
+The task is: automatically execute the trending projects recommendation skill,
+generate an article with images, and post it to the Feishu group.</code></pre>
+
+<blockquote>
+  <p><strong>Extended Learning: Claude Code Tutorial</strong></p>
+  <p>&#x1F4FA; Video Tutorial: <em>The Most Comprehensive! Master Claude Code in 60 Minutes ~ [With Complete Documentation]</em></p>
+  <p>&#x1F4C4; Documentation Tutorial</p>
+</blockquote>
+
+</main>
+</body>
+</html>
